@@ -7,8 +7,7 @@ useful for other people as well, espcially someone who intends to learn
 python or any programming language. They are all commented and there's 
 always a readme to explain what the problem was about.
 
-You may very well contact me if you find anything interesting. Don't hesitate
-in making a pul requests for anything reason.
+You may very well contact me if you find anything interesting.
 
 
 License
