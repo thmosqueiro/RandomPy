@@ -26,4 +26,4 @@ Everything in this repository is under the WTFLP, which reads as follows.
   0. You just DO WHAT THE FUCK YOU WANT TO.
 ```
 
-~tl;dr~ version: do as you please, just don't sue me.
+**tl;dr** version: do as you please, just don't sue me.
