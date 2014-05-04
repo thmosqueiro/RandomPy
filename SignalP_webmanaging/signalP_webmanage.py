@@ -139,7 +139,12 @@ print 'Our results are in ' + url2go + '\n\n'
 
 # Waiting a bit for the results...
 print 'Waiting some moments for the server to complete our request!'
-time.sleep(2*60)
+time.sleep(5*60)
+
+# This timing has actually two purposes: while the results are being 
+# calculated, the script will be quiet. But also, there will be some 
+# time after the results are ready so that the server won't go overloaded.
+# Please, do not overload the server using this script!!
 
 # Going after the results...
 commands.go(url2go)
