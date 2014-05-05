@@ -161,7 +161,7 @@ class ModelFeed:
                         
                 print "\n -> getting new post - #%i " %(postnumber)
 
-                shortlink = shorten_url(str(link), 'thmosqueiro', 'R_66a444b82f5fb461cbb80ba930b87690' ) 
+                shortlink = shorten_url(str(link), '', '' ) 
 
                 position = self.find("author", position, item)
                 author = item.childNodes[position].childNodes[0].firstChild.nodeValue
@@ -286,8 +286,8 @@ class twittcon:
 def main():
     
     b = bcolors()
-    gin = "thmosqueiro"
-    apikey = "R_66a444b82f5fb461cbb80ba930b87690";
+    gin = ""
+    apikey = "";
     feedurl = "http://legauss.blogspot.com/feeds/posts/default"
     
     print "\n\n -- iLegauss\n" + b.ENDC
