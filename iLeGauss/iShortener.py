@@ -25,4 +25,4 @@ def shorten_url(long_url, login_user, api_key):
 
 
 if __name__ == '__main__':
-	shorten_url('http://http://tux-log.blogspot.com', 'thmosqueiro', 'R_66a444b82f5fb461cbb80ba930b87690' ) 
+	shorten_url('http://http://tux-log.blogspot.com', '', '' ) 
