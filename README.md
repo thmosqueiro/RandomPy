@@ -7,6 +7,8 @@ useful for other people as well, especially someone who intends to learn
 python or any programming language. They are all commented and there's 
 always a readme to explain what the problem was about.
 
+*You will notice that I'm still putting things in order.*
+
 You may very well contact me if you find anything interesting.
 
 
