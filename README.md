@@ -3,11 +3,20 @@ RandomPy
 
 Random python scripts that may serve as real life examples of Python
 applications. All scripts come from real small experiences and may be
-useful for other people as well, espcially someone who intends to learn
+useful for other people as well, especially someone who intends to learn
 python or any programming language. They are all commented and there's 
 always a readme to explain what the problem was about.
 
 You may very well contact me if you find anything interesting.
+
+
+About the material
+------
+
+I'm an user of emacs, so the scripts should look prettier inside emacs.
+Also, everything is written in Python 2.*, using a variety of
+libraries commonly found in most of Linux repositories. Finally
+though less important I sometimes use Enthought distribution.
 
 
 License
