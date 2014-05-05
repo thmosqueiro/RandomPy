@@ -1,10 +1,9 @@
 #!/usr/bin/python
 
+#
 # - iLegauss v0.9
-# by th482 @ 02.2010
-# contact: thiago d0t schiavo 4t gmail d0t com
-
-# Aknowledgements: thanks to all python developers, as to all python packages/libraries developers. The author also thanks to Wikipedia (used Atom article, which need some improvement).
+# by thmosqueiro @ 02.2010
+#
 
 
 import re
