@@ -24,7 +24,8 @@ Tests
 ------
 
 I'll keep a simple record of how C and python are doing. Below are the
-last results.
+last results. These are preliminary and not very carefull, averaged
+values. I'll keep updating this.
 
 Gen. Specs  | C-cvode     | scipy odeint | scikit ODES (sundials python interface)
 ------------| ----------- | ------------ | ----------- |
