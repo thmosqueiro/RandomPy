@@ -31,7 +31,7 @@ last results.
 
 C - sundials CVODE:      0.519s
 
-Python - scipy odes (Adams): 3.96s
+Python - scipy odeint (Adams): 3.96s
 
 Python - scikits.odes (BDF): xxx
 
