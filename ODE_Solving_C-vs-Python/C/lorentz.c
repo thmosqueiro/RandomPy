@@ -5,8 +5,8 @@
 
 
 /* Pre-processor instructions  */
-#DEFINE PRINTOUTPUT 1
-#DEFINE FLUSHPRINTING 0
+#define PRINTOUTPUT 1
+#define FLUSHPRINTING 0
 
 #define Ith(v,i)    NV_Ith_S(v,i-1)
 
@@ -90,12 +90,12 @@ int main(int argc, char **argv)
 
       // Printing the output
 
-      #IFDEF PRINTOUTPUT == 1
+#if PRINTOUTPUT == 1
       PrintOutput(ar, t, y);
-      #ENDIF
-      #IFDEF FLUSHPRINTING == 1
+#endif
+#if FLUSHPRINTING == 1
       fflush(ar);
-      #ENDIF
+#endif
       
       tout += TMULT;
     }
@@ -117,11 +117,7 @@ int main(int argc, char **argv)
 
 static void PrintOutput(FILE *ar, double t, N_Vector y)
 {
-  int i;
-  fprintf(ar,"%lg %lg %lg %lg", t, Ith(y,1), Ith(y,2), Ith(y,3));
-  
-  fprintf(ar,"\n");
-  
+  fprintf(ar,"%lg %lg %lg %lg \n", t, Ith(y,1), Ith(y,2), Ith(y,3));
   return;
 }
 
