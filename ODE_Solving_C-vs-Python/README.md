@@ -26,14 +26,11 @@ Tests
 I'll keep a simple record of how C and python are doing. Below are the
 last results.
 
-* Intel(R) Core(TM) i7 CPU 970 @ 3.20GHz *
-* Fedora 21, kernel 3.19.1-201.fc21.x86_64 *
+Gen. Specs  | C-cvode     | scipy odeint | scikit ODES (sundials python interface)
+------------| ----------- | ------------ | ----------- |
+Intel i7 970 @ 3.20GHz, Fedora 21, kernel 3.19.1-201.fc21.x86_64   | 0.52s | 3.9s | 4.8s
 
-C - sundials CVODE:      0.519s
 
-Python - scipy odeint (Adams): 3.96s
-
-Python - scikits.odes (BDF): xxx
 
 
 

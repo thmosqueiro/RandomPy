@@ -15,7 +15,7 @@
 
 static int f(realtype t, N_Vector y, N_Vector ydot);
 static int check_flag(void *flagvalue, char *funcname, int opt);
-
+static void PrintOutput(FILE *,double , N_Vector);
 
 /*
  *-------------------------------
@@ -29,6 +29,10 @@ int main(int argc, char **argv)
   N_Vector y, abstol;
   void *cvode_mem;
   int flag;
+  FILE *ar;
+
+  /* Openning output file */
+  ar = fopen("lorentz_output.dat","w");
 
   /* Create serial vector of length NEQ for I.C. and abstol */
   y = N_VNew_Serial(NEQ);
@@ -63,8 +67,6 @@ int main(int argc, char **argv)
   /* Call CVDense to specify the CVDENSE dense linear solver */
   flag = CVDense(cvode_mem, 3);
   if (check_flag(&flag, "CVDense", 1)) return(1);
-  /* Set the Jacobian routine to internal estimation */
-  //flag=CVDlsSetDenseJacFn(cvode_mem, NULL);
   
   if (check_flag(&flag, "CVDlsSetDenseJacFn", 1)) return(1);
   
@@ -79,12 +81,19 @@ int main(int argc, char **argv)
     if (check_flag(&flag, "CVode", 1)) break;
     if (flag == CV_SUCCESS)
     {
-      //printf("%f %f %f %f\n", tout, Ith(y,1), Ith(y,2), Ith(y,3));
       if ( tout > 3000. ) break;
+
+      // Printing the output
+      PrintOutput(ar, t, y);
+      fflush(ar);
+      
       tout += TMULT;
     }
   }
 
+  
+  /* Closing output file */
+  fclose(ar);
   
   /* Free y vector */
   N_VDestroy_Serial(y);
@@ -94,6 +103,18 @@ int main(int argc, char **argv)
   
   return(0);
 }
+
+
+static void PrintOutput(FILE *ar, double t, N_Vector y)
+{
+  int i;
+  fprintf(ar,"%lg %lg %lg %lg", t, Ith(y,1), Ith(y,2), Ith(y,3));
+  
+  fprintf(ar,"\n");
+  
+  return;
+}
+
 
 static int f(realtype t, N_Vector y, N_Vector ydot)
 {
@@ -115,6 +136,7 @@ static int f(realtype t, N_Vector y, N_Vector ydot)
 
   return(0);
 }
+
 
 
 

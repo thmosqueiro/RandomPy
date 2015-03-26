@@ -1,4 +1,4 @@
-CC = icc
+CC = gcc
 LDFLAGS= -lm -lcvode -lcvodeserial
 
 lorentz: $(OBJECTS)

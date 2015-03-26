@@ -29,7 +29,7 @@ def f(t, Y, Ydot):
     
 solver = ode('cvode', f)
 
-tf = 30.
+tf = 3000.
 t = np.linspace(0., tf, 100*int(tf))
 results = solver.solve(t, Y0)
 
