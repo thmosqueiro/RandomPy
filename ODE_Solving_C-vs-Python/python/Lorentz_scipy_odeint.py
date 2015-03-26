@@ -1,3 +1,9 @@
+# 
+# This is a very simple implementation of the Lorentz system using 
+# scipy's odeint function. It basically calls odepack imeplementation
+# in Fortran.
+# 
+
 import numpy as np
 import pylab as pl
 from scipy.integrate import odeint
