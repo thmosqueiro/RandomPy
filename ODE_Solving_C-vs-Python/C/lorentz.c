@@ -3,6 +3,11 @@
 #include <cvodes/cvodes_dense.h>
 #include <nvector/nvector_serial.h>
 
+
+/* Pre-processor instructions  */
+#DEFINE PRINTOUTPUT 1
+#DEFINE FLUSHPRINTING 0
+
 #define Ith(v,i)    NV_Ith_S(v,i-1)
 
 #define NEQ   3
@@ -84,8 +89,13 @@ int main(int argc, char **argv)
       if ( tout > 3000. ) break;
 
       // Printing the output
+
+      #IFDEF PRINTOUTPUT == 1
       PrintOutput(ar, t, y);
+      #ENDIF
+      #IFDEF FLUSHPRINTING == 1
       fflush(ar);
+      #ENDIF
       
       tout += TMULT;
     }

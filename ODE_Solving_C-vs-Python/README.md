@@ -29,7 +29,8 @@ values. I'll keep updating this.
 
 Gen. Specs  | C-cvode     | scipy odeint | scikit ODES (sundials python interface)
 ------------| ----------- | ------------ | ----------- |
-Intel i7 970 @ 3.20GHz, Fedora 21, kernel 3.19.1-201.fc21.x86_64   | 0.52s | 3.9s | 4.8s
+Intel i7 970 @ 3.20GHz, Fedora 21, kernel 3.19.1-201.x86_64  (without printing output)  | 0.52s | 3.9s | 4.8s
+Intel i7 970 @ 3.20GHz, Fedora 21, kernel 3.19.1-201.x86_64  (printing output)  | 12.3s | xxx | 6.0s
 
 
 
