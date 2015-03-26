@@ -29,8 +29,11 @@ last results.
 * Intel(R) Core(TM) i7 CPU 970 @ 3.20GHz *
 * Fedora 21, kernel 3.19.1-201.fc21.x86_64 *
 
-C:      0.519s
-Python: 3.96s
+C - sundials CVODE:      0.519s
+
+Python - scipy odes (Adams): 3.96s
+
+Python - scikits.odes (BDF): xxx
 
 
 
