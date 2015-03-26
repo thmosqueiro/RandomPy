@@ -1,3 +1,11 @@
+# 
+# I'm calling Sundials' CVODE using scikits.odes library. 
+#
+# TODO:
+#    Make some comments
+#    Test time tomorrow!
+# 
+
 from __future__ import print_function
 import numpy as np
 from scikits.odes import ode
