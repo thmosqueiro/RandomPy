@@ -27,10 +27,13 @@ I'll keep a simple record of how C and python are doing. Below are the
 last results. These are preliminary and not very carefull, averaged
 values. I'll keep updating this.
 
+Here is a simple comparison: running t=3000. with dt=0.01.
+
 Gen. Specs  | C-cvode     | scipy odeint | scikit ODES
 ------------| ----------- | ------------ | ----------- |
 Intel i7 970 @ 3.20GHz, Fedora 21, kernel 3.19.1-201.x86_64  (without printing output)  | 0.52s | 3.9s | 4.8s
 Intel i7 970 @ 3.20GHz, Fedora 21, kernel 3.19.1-201.x86_64  (printing output)  | 5.2s | xxx | 6.9s
+Intel i5 @ 2.40GHz, Fedora 20, kernel 3.18.9-100.x86_64 (printing output) | 5.9s | 5s | 8.6s
 
 All cases were simulated with relative tolerance of 1e-6 and absolute 
 tolerance of 1e-9. The output file is about 100Mb.
