@@ -38,6 +38,7 @@ If you need a list of all measures inside any given dictionary, just use *.keys(
 'HDFS: Number of large read operations', 'HDFS: Number of bytes written', 
 'FILE: Number of large read operations', 'FILE: Number of bytes read']
 ```
+Thus, you don't need to go dig the logfiles to file what each item means.
 
 This data organization makes it easy to run averages or any kind of statistics throughout a set of logfiles. At the end of **HMRLogParser.py** file you can find a small example evaluating averages over time.
 
