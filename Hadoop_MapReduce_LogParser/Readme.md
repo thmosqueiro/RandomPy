@@ -57,10 +57,10 @@ This should prompt the following graph.
 
 
 
-# License
-------
+License
+====
 
-This is under the WTFPL, use it as you want. Stars are welcome thou.
+This is under the WTFPL, use it as you want. Stars are welcome thou =)
 
 
 ```
