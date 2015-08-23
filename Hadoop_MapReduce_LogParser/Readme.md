@@ -1,10 +1,11 @@
 Hadoop MapReduce LogParser
 ====
 
-This is a simple log parser for Hadoop MapReduce standard log, developed with [@jaquejbrito](github.com/jaquejbrito). The script will parse the whole log file into a rather simple list of dictionaries, following a simple logic. It is considered that in each logfile there are several executions of each algorithm/program (intended, for instance, to further analyses). Each execution is then divided in several different jobs, or map-reduce cycles. This script will parse all relevant information seperately for each job, then for each execution time. See example below.
+This is a simple log parser for Hadoop MapReduce standard log, developed with [@jaquejbrito](http://github.com/jaquejbrito). The script will parse the whole log file into a rather simple list of dictionaries, following a simple logic. It is considered that in each logfile there are several executions of each algorithm/program (intended, for instance, to further analyses). Each execution is then divided in several different jobs, or map-reduce cycles. This script will parse all relevant information seperately for each job, then for each execution time. See example below.
 
 
-# Example of usage
+Example of usage
+----
 
 For instance, suppose you have a logfile called Example1.log with three executions with three jobs each, then you can run:
 ```
@@ -41,7 +42,8 @@ If you need a list of all measures inside any given dictionary, just use *.keys(
 This data organization makes it easy to run averages or any kind of statistics throughout a set of logfiles. At the end of **HMRLogParser.py** file you can find a small example evaluating averages over time.
 
 
-# Example of batch analysis
+Example of batch analysis
+---
 
 You can simply run the following to see how the parser works.
 ```
@@ -50,3 +52,30 @@ python HMRLogParser.py
 This should prompt the following graph.
 
 <img src="https://raw.githubusercontent.com/thmosqueiro/RandomPy/master/Hadoop_MapReduce_LogParser/ExampleGraph.png" width=350px />
+
+
+
+
+# License
+------
+
+This is under the WTFPL, use it as you want. Stars are welcome thou.
+
+
+```
+	     DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+                    Version 2, December 2004 
+
+ Copyright (C) 2004 Sam Hocevar <sam@hocevar.net> 
+
+ Everyone is permitted to copy and distribute verbatim or modified 
+ copies of this license document, and changing it is allowed as long 
+ as the name is changed. 
+
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
+```
+
+**tl;dr** version: use it as you please, just don't sue me.
