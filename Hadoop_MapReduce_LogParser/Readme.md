@@ -3,6 +3,7 @@ Hadoop MapReduce LogParser
 
 This is a simple log parser for Hadoop MapReduce standard log, developed with [@jaquejbrito](github.com/jaquejbrito). The script will parse the whole log file into a rather simple list of dictionaries, following a simple logic. It is considered that in each logfile there are several executions of each algorithm/program (intended, for instance, to further analyses). Each execution is then divided in several different jobs, or map-reduce cycles. This script will parse all relevant information seperately for each job, then for each execution time. See example below.
 
+
 # Example of usage
 
 For instance, suppose you have a logfile called Example1.log with three executions with three jobs each, then you can run:
@@ -30,17 +31,19 @@ Each of the above dictionary names are tagged according to the standard logfile 
 If you need a list of all measures inside any given dictionary, just use *.keys()* method.
 ```
 >>> print ExecMeasures[0][0]['File System Counters'].keys()
-['FILE: Number of write operations', 'HDFS: Number of write operations', 'FILE: Number of read operations', 
-'HDFS: Number of bytes read', 'HDFS: Number of read operations', 'FILE: Number of bytes written', 
+['FILE: Number of write operations', 'HDFS: Number of write operations', 
+'FILE: Number of read operations', 'HDFS: Number of bytes read', 
+'HDFS: Number of read operations', 'FILE: Number of bytes written', 
 'HDFS: Number of large read operations', 'HDFS: Number of bytes written', 
 'FILE: Number of large read operations', 'FILE: Number of bytes read']
 ```
+
+This data organization makes it easy to run averages or any kind of statistics throughout a set of logfiles. At the end of **HMRLogParser.py** file you can find a small example evaluating averages over time.
 
 
 # Example of batch analysis
 
 You can simply run the following to see how the parser works.
-
 ```
 python HMRLogParser.py
 ```
