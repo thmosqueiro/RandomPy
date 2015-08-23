@@ -7,7 +7,7 @@ This is a simple log parser for Hadoop MapReduce standard log, developed with [@
 Example of usage
 ----
 
-For instance, suppose you have a logfile called Example1.log with three executions with three jobs each, then you can run:
+For instance, suppose you have a logfile called [Example1.log](https://github.com/thmosqueiro/RandomPy/blob/master/Hadoop_MapReduce_LogParser/Exemplo1.log) with three executions with three jobs each, then you can run:
 ```
 import HMRLogParser as lib
 ExecMeasures = lib.HMRlogParser('Example1.log')
